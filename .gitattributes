@@ -1,8 +1,9 @@
 # Auto detect text files and perform LF normalization
 * text=auto
 
+# Marcar arquivos C++ como "vendored" para não interferirem na detecção da linguagem
 *.cpp linguist-vendored=true
 *.h linguist-vendored=true
 
-*.dart linguist-detectable=true
-
+# Marcar arquivos Dart para detecção explícita
+*.dart linguist-language=Dart
