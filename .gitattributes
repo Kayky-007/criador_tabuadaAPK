@@ -1,9 +1,13 @@
 # Auto detect text files and perform LF normalization
 * text=auto
 
-# Marcar arquivos C++ como "vendored" para não interferirem na detecção da linguagem
-*.cpp linguist-vendored=true
-*.h linguist-vendored=true
+# Ignorar arquivos relacionados ao CMake para evitar que influenciem a detecção da linguagem
+CMakeLists.txt linguist-vendored=true
+linux/flutter/generated_plugins.cmake linguist-vendored=true
+windows/flutter/generated_plugins.cmake linguist-vendored=true
+windows/runner/CMakeLists.txt linguist-vendored=true
+linux/flutter/CMakeLists.txt linguist-vendored=true
+windows/flutter/CMakeLists.txt linguist-vendored=true
 
-# Marcar arquivos Dart para detecção explícita
+# Marcar arquivos Dart como linguagem detectável
 *.dart linguist-language=Dart
